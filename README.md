@@ -1,7 +1,7 @@
-TypeScript ExtJS Demo
+TypeScript ExtJS Custom Application Demo
 ====================
 
-types/extjs/*.d.ts 来自：https://github.com/ExtTS/definitions/tree/master/6.2.0-classic-all-packages-no-jsdocs
+使用`Ext.app.Application`的`mainView`来显示一个组件
 
 ```
 npm install

@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/extjs-6': git+https://git@github.com:freewind/extjs-typings-6.2.0.git
   '@types/node': 16.11.0
-  extjs-typings-6.2.0: git+https://git@github.com:freewind/extjs-typings-6.2.0.git
   ts-node: 10.3.0
   typescript: 4.9.4
   vite: 4.0.1
@@ -11,8 +11,8 @@ dependencies:
   ts-node: 10.3.0_pk6qokpy4h5xjja5ccvwqglbdm
 
 devDependencies:
+  '@types/extjs-6': github.com/freewind/extjs-typings-6.2.0/a15b9969802d907dca87e943bcbe2a4b5709a4bc
   '@types/node': 16.11.0
-  extjs-typings-6.2.0: github.com/freewind/extjs-typings-6.2.0/e185d9b2ce6997223535a2fff26ac06d25425bf4
   typescript: 4.9.4
   vite: 4.0.1_@types+node@16.11.0
 
@@ -454,8 +454,8 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  github.com/freewind/extjs-typings-6.2.0/e185d9b2ce6997223535a2fff26ac06d25425bf4:
-    resolution: {commit: e185d9b2ce6997223535a2fff26ac06d25425bf4, repo: https://git@github.com/freewind/extjs-typings-6.2.0.git, type: git}
+  github.com/freewind/extjs-typings-6.2.0/a15b9969802d907dca87e943bcbe2a4b5709a4bc:
+    resolution: {commit: a15b9969802d907dca87e943bcbe2a4b5709a4bc, repo: https://git@github.com/freewind/extjs-typings-6.2.0.git, type: git}
     name: extjs-typings-6.2.0
     version: 1.0.0
     dev: true

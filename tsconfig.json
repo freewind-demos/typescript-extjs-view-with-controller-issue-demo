@@ -9,7 +9,6 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/**/*.ts",
-    "node_modules/extjs-typings-6.2.0/**/*.d.ts"
+    "src/**/*.ts"
   ]
 }

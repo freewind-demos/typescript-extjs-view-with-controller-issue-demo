@@ -1,7 +1,9 @@
-TypeScript ExtJS Custom Application Demo
-====================
+TypeScript ExtJS Custom Controller ViewModel Demo
+=================================================
 
-使用`Ext.app.Application`的`mainView`来显示一个组件
+View中的listeners中的events对应的handler，需要注意：
+1. 如果是View中自己的listeners，会找View上定义的method
+2. 如果是View中嵌入的View的listeners，会找View中controller中定义的method，再找View上定义的method
 
 ```
 npm install

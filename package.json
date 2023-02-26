@@ -8,6 +8,7 @@
   "devDependencies": {
     "@types/node": "16.11.0",
     "typescript": "4.9.4",
-    "vite": "4.0.1"
+    "vite": "4.0.1",
+    "extjs-typings-6.2.0": "git+https://git@github.com:freewind/extjs-typings-6.2.0.git"
   }
 }

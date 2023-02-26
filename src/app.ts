@@ -1,4 +1,4 @@
-Ext.onReady?.(() => {
+Ext.onReady(() => {
     new Ext.app.Application({
         name: 'hello',
         mainView: new Ext.panel.Panel({
@@ -7,10 +7,10 @@ Ext.onReady?.(() => {
             width: 200,
             title: 'Hello world',
             html: 'Hello Ext!',
-        } as Ext.panel.Panel.Cfg),
+        } ),
         launch: () => {
             console.log("### launch")
             return true;
         }
-    } as Ext.app.Application.Cfg);
+    } );
 })

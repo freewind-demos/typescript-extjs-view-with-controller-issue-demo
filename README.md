@@ -7,7 +7,7 @@ TypeScript ExtJS View with Controller Issue Demo
    中寻找method，行为不对
 2. 如果先define一个自己的类，再创建，则handler会在controller中找。行为正确
 
-这个行为与是否使用`new`还是`Ext.create`无关，关键是要必须要定义一个自己的类
+这个行为与是否使用`new`还是`Ext.create`无关，关键是要必须要使用`Ext.define`定义一个自己的类
 
 ```
 npm install

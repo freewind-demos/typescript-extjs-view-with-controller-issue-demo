@@ -4,7 +4,7 @@ Ext.onReady(() => {
 
     const myViewModel = new Ext.app.ViewModel({
         data: {
-            message: 'click on me directly'
+            username: 'username from viewModel'
         }
     });
 
@@ -18,9 +18,9 @@ Ext.onReady(() => {
         extend: 'Ext.panel.Panel',
         height: 100,
         width: 200,
-        title: 'Hello world - correct',
+        title: 'Hello world - correct click',
         bind: {
-            html: 'Hello, {message}'
+            html: 'Hello, {username}'
         },
         viewModel: myViewModel,
         controller: myController,
@@ -55,9 +55,35 @@ Ext.onReady(() => {
                 Ext.create('Ext.panel.Panel', {
                     height: 100,
                     width: 200,
-                    title: 'Hello world - strange click',
+                    title: 'Hello world - strange click 1',
                     bind: {
-                        html: 'Hello, {message}'
+                        html: 'Hello, {username}'
+                    },
+                    viewModel: myViewModel,
+                    controller: myController,
+                    // NOTE will be ignored
+                    onClick: () => alert('### view.onClick'),
+                    listeners: {
+                        click: {
+                            element: 'el',
+                            // NOTE view中的fn指向的是view自己定义的method
+                            fn: 'onClick'
+                        }
+                    },
+                    items: [{
+                        xtype: 'button',
+                        listeners: {
+                            // NOTE 嵌入的'fn'会先指向controller中的method，然后是view自己的method
+                            click: 'onClick',
+                        }
+                    }]
+                }),
+                new Ext.panel.Panel({
+                    height: 100,
+                    width: 200,
+                    title: 'Hello world - strange click 2',
+                    bind: {
+                        html: 'Hello, {username}'
                     },
                     viewModel: myViewModel,
                     controller: myController,

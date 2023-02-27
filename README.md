@@ -1,11 +1,13 @@
-TypeScript ExtJS Difference Between 'define' and 'new' Demo
+TypeScript ExtJS View with Controller Issue Demo
 =================================================
 
-使用`Ext.define`与`new Ext.xxx`在简单情况下行为相同，但是复杂时会不同：
-1. `Ext.define`情况下，行为始终与javascript下的写法一致，推荐
-2. `new Ext`下，某个view自己的listener的handler不会按预期去找controller下的方法，而是在自己身上找。只有子组件才会到controller下找。
+当我们定义一个view并且使用controller的时候，发现ExtJs有一个bug:
 
-由于这种行为上的差异将会导致不可预料的bug，所以我们推荐使用`Ext.define`的形式。虽然没有后者好看，但安全第一。
+1. 如果我们直接基于Ext.panel.Panel创建一个实例，则其上的listener中定义的event的handler，会在当前对象而非 'controller'
+   中寻找method，行为不对
+2. 如果先define一个自己的类，再创建，则handler会在controller中找。行为正确
+
+这个行为与是否使用`new`还是`Ext.create`无关，关键是要必须要定义一个自己的类
 
 ```
 npm install
